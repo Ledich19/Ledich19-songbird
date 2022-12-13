@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="icon" href="./favicon.ico" type="img/png">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <span data-gallery-btn class="header__logo logo">
+          <svg class="logo__icon">
+            <use href="./assets/icons/symbol-defs.svg#icon-logo-song-bird"></use>
+          </svg>
+        </span>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li  class="nav__item">
+              <a class="nav__link" href="./#home">
+                <span data-lang='home'>home</span>
+              </a>
+            </li>
+            <li  class="nav__item">
+              <a  class="nav__link" href="./#quiz">
+                <span data-lang='quiz'>quiz</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__score">
+          <span>
+            <span data-lang='score' class="header__score-text">score:</span> 
+            <span class="header__score-num">0</span>
+          </span>
+          
+          <select name="lang" class="lang">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+
+    <section id="home" class="home  page">
+      <div class="container home__container">
+        <div class="home__wrapper">
+          <div class="home__icon">
+            <img src="./assets/icons/14413327-tree-silhouette-with-bird-fly.svg" alt="tree">
+            </svg>
+            <div class="home__main">
+              <div class="clouds">
+                <div class="c1 one"></div>
+                <div class="c1 two"></div>
+                <div class="c1 three"></div>
+                <div class="c1 four"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="quiz  page">
+      <div class="container">
+
+        <ul class="quiz__questions">
+          {{quiz__questions}}
+        </ul>
+
+        <div class="quiz__ask ask">
+          {{renderAsk}}
+        </div>
+        <div class="quiz__wrapper">
+          <div class="quiz__answers answers">
+            {{renderAnswers}}
+          </div>
+          <div class="quiz__info-bird info-bird">
+            {{renderInfo}}
+          </div>
+        </div>
+        <button class="quiz__next-btn" disable>Next level</button>
+
+
+      </div>
+    </section>
+    <section id="results" class="results page">
+      <div class="container">
+        <div class="results__wrapper">
+
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery page">
+      <div class="container">
+        <div class="gallery__wrapper">
+          <ul class="gallery__list">
+
+            <li class="gallery__item">
+              <div class="gallery__photo">
+                <img src='./assets/images/bird.webp' alt="bird name">
+              </div>
+              <div class="gallery__wrapper">
+                <div class="gallery__name">name
+                  <div class="gallery__audio">
+                    <audio id="audioGallery" src="#"></audio>
+                    <button data-info="play" class="gallery__play">&#9658;</button>
+                    <button data-info="stop" class="gallery__stop">&#10073&#10073</button>
+                  </div>
+                </div>
+                <div class="gallery__line"></div>
+                <div class="gallery__species">${visible ? species : '*******'}</div>
+                <div class="gallery__line"></div>
+              </div>
+              <div class="gallery__description">
+                ${visible ? description : "Послушайте плеер и выберите название птицы"}
+              </div>
+            </li>
+
+
+
+        </div>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__wrapper">
+        <a class="rs-logo logo" href="https://rs.school/js/">
+          <svg class="rs-logo__icon">
+            <use href="./assets/icons/symbol-defs.svg#icon-rs_school_js-3"></use>
+          </svg>
+        </a>
+        <div class="footer__data"><span>2022 г</span></div>
+        <a class="git-logo logo" href="https://github.com/Ledich19">
+          <svg class="git-logo__icon">
+            <use href="./assets/icons/symbol-defs.svg#icon-github"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

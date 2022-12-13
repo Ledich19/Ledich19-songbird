@@ -1,0 +1,68 @@
+@import "~normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap");
+
+@import "./variables";
+
+@import "./header.scss";
+@import "./home.scss";
+@import "./quiz.scss";
+@import "./ask.scss";
+
+@import "./gallery.scss";
+@import "./results.scss";
+
+@import "./footer.scss";
+
+// @font-face {
+//   font-family: 'icons';
+//   src: url('../fonts/icons.ttf') format('truetype');
+// }
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: calc(1366 + 20) + px;
+}
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--main-color);
+  user-select: none;
+  
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+  //background-image: url(./../images/main/Giant_Panda.jpg);
+}
+
+main{
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.quiz, .home, .results , .gallery{
+  transition: all .8s ease-in-out;
+  min-width: calc(100% - 160px);
+  right: 0;
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: hidden;
+  margin-top: -250%;
+  position: absolute;
+  will-change: margin-top;
+  z-index: 1;
+  &:target{
+    margin-top: 0%;
+  }
+}
